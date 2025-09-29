@@ -1,0 +1,90 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #801336, #510a32);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+background-color: #2d142c;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.choice {
+  background: #222;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.choice:hover {
+  background: #444;
+  transform: scale(1.1);
+}
+
+.result {
+  font-size: 1.4em;
+  min-height: 40px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .choice {
+    width: 100%;
+  }
+}
